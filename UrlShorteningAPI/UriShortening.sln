@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UriShortening.Persistence", "UrlShortening.Persistence\UriShortening.Persistence.csproj", "{7F7646E6-2A49-4F39-BAB4-DA8EF9BC67B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Analysers", "Analysers", "{66529BB8-98BD-4611-9B0F-62936FB68859}"
+	ProjectSection(SolutionItems) = preProject
+		UriShortening.ruleset = UriShortening.ruleset
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UriShortening.WebApi", "UriShortening.WebApi\UriShortening.WebApi.csproj", "{B14D9F2F-728B-40A2-A735-2EF790D14704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UriShortening.BusinessLogic", "UriShortening.BusinessLogic\UriShortening.BusinessLogic.csproj", "{39911284-E13B-471B-872B-FF35D0E43A95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F7646E6-2A49-4F39-BAB4-DA8EF9BC67B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7646E6-2A49-4F39-BAB4-DA8EF9BC67B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F7646E6-2A49-4F39-BAB4-DA8EF9BC67B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F7646E6-2A49-4F39-BAB4-DA8EF9BC67B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B14D9F2F-728B-40A2-A735-2EF790D14704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B14D9F2F-728B-40A2-A735-2EF790D14704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B14D9F2F-728B-40A2-A735-2EF790D14704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B14D9F2F-728B-40A2-A735-2EF790D14704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39911284-E13B-471B-872B-FF35D0E43A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39911284-E13B-471B-872B-FF35D0E43A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39911284-E13B-471B-872B-FF35D0E43A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39911284-E13B-471B-872B-FF35D0E43A95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
