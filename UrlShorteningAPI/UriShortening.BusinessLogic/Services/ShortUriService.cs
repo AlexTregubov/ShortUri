@@ -37,7 +37,7 @@
 
             validator.Validate(input);
 
-            var dbShortedUri = await dbContext.ShortedUrls.FirstOrDefaultAsync(x => x.SourceUri == input.Uri);
+            var dbShortedUri = await dbContext.ShortedUrls.FirstOrDefaultAsync(x => x.SourceUri == input.Uri && x.CreatedById == input.CreatedById);
 
             if (dbShortedUri == null)
             {
