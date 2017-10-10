@@ -24,11 +24,18 @@
             return uriService.CreateShortUrl(model);
         }
 
-        [Route(UriRoutes.GetUriRoute)]
+        [Route(UriRoutes.GetUriListRoute)]
         [HttpGet]
         public Task<List<UriModel>> CreateShortUri([FromUri] UriFilter filter)
         {
             return uriService.GetUriByFilter(filter);
+        }
+
+        [Route(UriRoutes.GetUriRoute)]
+        [HttpGet]
+        public Task<UriModel> CreateShortUriByid(string id)
+        {
+            return uriService.GetUriByKey(id);
         }
     }
 }

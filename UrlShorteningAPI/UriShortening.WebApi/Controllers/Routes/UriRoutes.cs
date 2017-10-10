@@ -6,6 +6,8 @@
 
         public const string AddUriRoute = "";
 
-        public const string GetUriRoute = "";
+        public const string GetUriListRoute = "list";
+
+        public const string GetUriRoute = "{id}";
     }
 }

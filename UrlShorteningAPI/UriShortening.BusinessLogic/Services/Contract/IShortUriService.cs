@@ -9,5 +9,7 @@
         Task<UriModel> CreateShortUrl(AddUriModel input);
 
         Task<List<UriModel>> GetUriByFilter(UriFilter filter);
+
+        Task<UriModel> GetUriByKey(string key);
     }
 }

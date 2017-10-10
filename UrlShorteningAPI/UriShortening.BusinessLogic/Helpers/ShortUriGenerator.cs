@@ -14,11 +14,16 @@
             KeyLength = int.Parse(ConfigurationManager.AppSettings["KeyLength"]);
         }
 
-        public static string CreateShortUri()
+        public static string CreateShortUriKey()
         {
             var newKey = Guid.NewGuid().ToString("N").ToLower().Substring(0, KeyLength);
 
-            return string.Concat(BaseUiUrl, newKey);
+            return newKey;
+        }
+
+        public static string GenerateShortUriByKey(string key)
+        {
+            return string.Concat(BaseUiUrl, key);
         }
     }
 }

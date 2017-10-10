@@ -50,7 +50,6 @@
             return mapper.Map<UriModel>(dbShortedUri);
         }
 
-
         public async Task<List<UriModel>> GetUriByFilter(UriFilter filter)
         {
             Error.IfNull(filter, ErrorCode.InvalidInput, "Invalid input");
@@ -60,6 +59,15 @@
             var dbShortedUris = await dbContext.ShortedUrls.Where(x => x.CreatedById == filter.CreatedById).ToListAsync();
 
             return mapper.Map<List<UriModel>>(dbShortedUris);
+        }
+
+        public async Task<UriModel> GetUriByKey(string key)
+        {
+            Error.IfNull(key, ErrorCode.InvalidInput, "Invalid input");
+
+            var dbShortedUri = await dbContext.ShortedUrls.FirstOrDefaultAsync(x => x.ShortUri == key);
+
+            return dbShortedUri == null ? null : mapper.Map<UriModel>(dbShortedUri);
         }
     }
 }
