@@ -1,0 +1,43 @@
+button {
+    display: inline-block;
+    background: rgba(100,2,45,255);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+    margin: 50px 75px 50px 40px;
+}
+button:hover { background: rgba(120,2,45,255); }
+button:active { background: rgba(100,22,45,100); }
+
+label {
+    background: rgba(100,22,45,100);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+body{
+    background: rgba(100,22,45,100);
+}
+
+input{
+    background: rgba(100,22,45,100);
+}
+
+div {
+    background: rgba(100,22,45,100);
+    color: white;
+}
+
+ pre {
+     background: rgba(100,22,45,100);
+     text-align: center;
+     color: white;
+     font-weight: 700;
+ }
