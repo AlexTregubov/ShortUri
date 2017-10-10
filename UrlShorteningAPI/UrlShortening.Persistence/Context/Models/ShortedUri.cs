@@ -9,5 +9,9 @@
         public string ShortUri { get; set; }
 
         public string CreatedById { get; set; }
+
+        public string CreatedAt { get; set; }
+
+        public int? TransferCount { get; set; }
     }
 }

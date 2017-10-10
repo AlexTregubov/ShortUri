@@ -19,6 +19,12 @@
 
             Property(it => it.ShortUri)
                 .IsRequired();
+
+            Property(it => it.CreatedAt)
+                .IsOptional();
+
+            Property(it => it.TransferCount)
+                .IsOptional();
         }
     }
 }

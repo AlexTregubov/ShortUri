@@ -11,5 +11,7 @@
         Task<List<UriModel>> GetUriByFilter(UriFilter filter);
 
         Task<UriModel> GetUriByKey(string key);
+
+        Task UpdateUriTransferCount(string key);
     }
 }

@@ -63,11 +63,25 @@
 
         public async Task<UriModel> GetUriByKey(string key)
         {
-            Error.IfNull(key, ErrorCode.InvalidInput, "Invalid input");
-
-            var dbShortedUri = await dbContext.ShortedUrls.FirstOrDefaultAsync(x => x.ShortUri == key);
+            var dbShortedUri = await GetGbModelByKey(key);
 
             return dbShortedUri == null ? null : mapper.Map<UriModel>(dbShortedUri);
+        }
+
+        public async Task UpdateUriTransferCount(string key)
+        {
+            var dbShortedUri = await GetGbModelByKey(key);
+
+            dbShortedUri.TransferCount = dbShortedUri.TransferCount.GetValueOrDefault() + 1;
+
+            await dbContext.SaveChangesAsync();
+        }
+
+        private Task<ShortedUrl> GetGbModelByKey(string key)
+        {
+            Error.IfNull(key, ErrorCode.InvalidInput, "Invalid input");
+
+            return dbContext.ShortedUrls.FirstOrDefaultAsync(x => x.ShortUri == key);
         }
     }
 }

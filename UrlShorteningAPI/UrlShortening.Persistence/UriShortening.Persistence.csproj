@@ -92,6 +92,14 @@
     <Compile Include="Migrations\201710041516298_InitialDataStructure.Designer.cs">
       <DependentUpon>201710041516298_InitialDataStructure.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710101952310_CreatedAtAndTransferCountAdded.cs" />
+    <Compile Include="Migrations\201710101952310_CreatedAtAndTransferCountAdded.Designer.cs">
+      <DependentUpon>201710101952310_CreatedAtAndTransferCountAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710101958590_TypeChanged.cs" />
+    <Compile Include="Migrations\201710101958590_TypeChanged.Designer.cs">
+      <DependentUpon>201710101958590_TypeChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,6 +110,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710041516298_InitialDataStructure.resx">
       <DependentUpon>201710041516298_InitialDataStructure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710101952310_CreatedAtAndTransferCountAdded.resx">
+      <DependentUpon>201710101952310_CreatedAtAndTransferCountAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710101958590_TypeChanged.resx">
+      <DependentUpon>201710101958590_TypeChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

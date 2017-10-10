@@ -9,5 +9,7 @@
         public const string GetUriListRoute = "list";
 
         public const string GetUriRoute = "{id}";
+
+        public const string Transfer = "{id}/transfer";
     }
 }

@@ -37,5 +37,12 @@
         {
             return uriService.GetUriByKey(id);
         }
+
+        [Route(UriRoutes.Transfer)]
+        [HttpPost]
+        public Task UpdateUriTransferCount(string id)
+        {
+            return uriService.UpdateUriTransferCount(id);
+        }
     }
 }
