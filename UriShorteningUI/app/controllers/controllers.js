@@ -32,18 +32,20 @@ var uriShortingController = function($rootScope, $scope, $http, $cookies, $state
         $state.go(path)
     };
 
-    $scope.goToHistory= function(){
-        $state.go("history");
-        shortedUriService.getUriList().then(onGettingListComplete, onError);
-    };
-
     $rootScope.$on('$stateChangeStart',
         function(event, toState, toParams, fromState, fromParams){
             if(toState.name === 'go') {
 
                 var key = $location.url().substr(4);
 
+                shortedUriService.updateTransferCount(key);
+
                 shortedUriService.getUriByKey(key).then(onGetiingByKeyComplete, onError);
+            }
+
+            if(toState.name === 'history') {
+
+                shortedUriService.getUriList().then(onGettingListComplete, onError);
             }
         });
 

@@ -14,6 +14,8 @@ app.directive('myDirectiveToGetShortedList', function() {
         restrict: 'E',
         template: "<ol ng-repeat=\"uri in shortedUriList\" style='ordere'>" +
         "<div><div>SourceUrl: {{uri.SourceUri}}</div>" +
-        "<div>ShortedUrl: {{uri.ShortUri}}</div></div></ol>"
+        "<div>ShortedUrl: {{uri.ShortUri}}</div>" +
+        "<div>ShortedUrl: {{uri.CreatedAt}}</div>" +
+        "<div>ShortedUrl: {{uri.TransferCount}}</div></div></ol>"
     };
 });

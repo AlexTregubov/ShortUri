@@ -62,6 +62,26 @@ app.factory('shortedUriService', function($http, $cookies) {
                 function(response) {
                     return response;
                 });
+        },
+
+        updateTransferCount: function(key) {
+
+            console.log('update transfer count for key: ' + key);
+
+            var req = {
+                method: 'Post',
+                url: baseUrl() + 'uri/' + key + '/transfer',
+                headers: getApiHeaders()
+            };
+
+            return $http(req).then(
+                function(response) {
+                    return response;
+                },
+                // error handler
+                function(response) {
+                    return response;
+                });
         }
     };
 
@@ -88,7 +108,7 @@ function guid() {
 }
 
 function baseUrl() {
-    return 'http://ec2-13-59-130-6.us-east-2.compute.amazonaws.com:81/';
+    return 'http://localhost:81/';
 }
 
 function getApiHeaders() {
